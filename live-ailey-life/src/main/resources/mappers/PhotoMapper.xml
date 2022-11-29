@@ -3,4 +3,7 @@
 <mapper namespace="live.ailey.mapper.PhotoMapper">
 
 
+    <select id="getList" resultType="live.ailey.domain.Photo">
+        select * from life_photo
+    </select>
 </mapper>

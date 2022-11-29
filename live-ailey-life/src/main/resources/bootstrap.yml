@@ -36,3 +36,5 @@ spring:
         server-addr: 101.33.197.146:8848
         watch:
           enabled: false
+mybatis:
+  config-locations: classpath:mappers/*.xml
