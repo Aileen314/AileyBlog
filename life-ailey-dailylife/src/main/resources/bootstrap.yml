@@ -3,11 +3,6 @@ server:
 spring:
   profiles:
     active: dev # 开发环境
-  datasource:
-    url: jdbc:mysql://47.108.54.58:3306/aileyblog?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-    username: root
-    password: 201314
-    driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: dailylife-server
   cloud:
@@ -36,5 +31,3 @@ spring:
         server-addr: 47.108.54.58:8848
         watch:
           enabled: false
-mybatis:
-  config-locations: classpath:mappers/*.xml
