@@ -4,23 +4,23 @@ spring:
   profiles:
     active: dev # 开发环境
   datasource:
-    url: jdbc:mysql://localhost:3306/aileyblog?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.108.54.58:3306/aileyblog?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     username: root
     password: 201314
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: life-server
+    name: dailylife-server
   cloud:
     nacos:
       config:
         # Nacos 认证用户
         username: nacos
         # Nacos 认证密码
-        password: nacos
+        password: 201314
         # 命名空间 常用场景之一是不同环境的配置的区分隔离，例如开发测试环境和生产环境的资源（如配置、服务）隔离等
         namespace:
         # 配置中心地址
-        server-addr: 101.33.197.146:8848
+        server-addr: 47.108.54.58:8848
         # 配置对应的分组
         group: DEFAULT_GROUP
         # 配置文件后缀
@@ -33,7 +33,7 @@ spring:
         #refresh: false   # 是否动态刷新，默认为false
       discovery:
         namespace:
-        server-addr: 101.33.197.146:8848
+        server-addr: 47.108.54.58:8848
         watch:
           enabled: false
 mybatis:
