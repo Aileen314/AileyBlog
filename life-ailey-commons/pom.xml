@@ -2,34 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>AileyBlog</artifactId>
+        <groupId>life.ailey</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>life.ailey</groupId>
-    <artifactId>AileyBlog</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <!--  打包方式  -->
-    <packaging>pom</packaging>
-
-    <!--  子模块  -->
-    <modules>
-        <module>life-ailey-commons</module>
-        <module>life-ailey-dailylife</module>
-    </modules>
-
+    <artifactId>life-ailey-commons</artifactId>
 
     <properties>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
         <hutool.version>5.3.8</hutool.version>
         <log4j.vsrsion>1.2.17</log4j.vsrsion>
-        <mysql.version>8.0.29</mysql.version>
+        <mysql.version>5.1.47</mysql.version>
         <druid.version>1.1.22</druid.version>
         <junit.version>4.12</junit.version>
         <lombok.version>1.18.8</lombok.version>
         <mybatis-spring-boot-starter.version>2.1.3</mybatis-spring-boot-starter.version>
     </properties>
 
-    <dependencyManagement>
         <dependencies>
             <!-- spring-cloud-->
             <dependency>
@@ -111,8 +104,22 @@
                 <artifactId>hutool-crypto</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
+
+            <!-- Nacos注册中心 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            </dependency>
+            <!-- Nacos配置中心 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            </dependency>
+            <!-- feign -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+            </dependency>
         </dependencies>
 
-    </dependencyManagement>
-    
 </project>
