@@ -1,5 +1,6 @@
 package life.ailey.domain;
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -12,4 +13,7 @@ public class Photo {
     private String name;
 
     private String url;
+
+    @TableLogic
+    private Integer delFlag;
 }
